@@ -1,10 +1,63 @@
 # InterviewClient
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.6.
+This project was generated with [Angular CLI] version 8.0.6.
+
+## Prev requirements
+
+# Windows
+Install [NodeJs](https://nodejs.org/es/) version 8 or higher.
+Install [NPM](https://www.npmjs.com/get-npm).
+Install [Angular-Cli](https://cli.angular.io/).
+
+# MacOs
+Install [NodeJs](https://nodejs.org/es/) version 8 or higher.
+Install [NPM](https://www.npmjs.com/get-npm).
+Install [Angular-Cli](https://cli.angular.io/).
+Install [ZSH](https://ohmyz.sh/).
+
+# Editor
+It's recommended to install visual studio code. [Visual Studio Code](https://code.visualstudio.com/).
+
+After installing the prerequisites in the console or windows bash we execute `npm install`.
+
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+
+## Directions
+
+This project is a simple interview client project:
+
+There are 3 main modules:
+1- Admin Module - Only admin role users can access to
+    - Simple users list gather via service and use of observables, pipe, map
+    - Added nesting component to assign account to selected user
+    - Use of input, output to communicate child and parent components
+
+2- Shared Module - All loggedin users can access to
+    - Simple Lorem Ipsum es component no logical structures there
+    - Adding nested component for admin role
+    - Structural directives to show admin module
+
+3- Login Module - All users 
+    - Login to enter simple project
+    - Use of reactive forms
+
+Mock Users
+username: leo
+password: 1234
+role: admin
+
+username: karen
+password: 1234
+role: admin
+
+username: jovan
+password: 1234
+role: user
+
 
 ## Code scaffolding
 
