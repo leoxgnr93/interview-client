@@ -1,0 +1,22 @@
+.container-responsive-form {
+    width: 32rem !important;
+    min-width: 32rem !important;
+    max-width: 32rem !important;
+    margin: auto;
+  }
+
+
+  #form-container {
+    padding: 8%;
+    margin-top: 0% !important;
+    height: 100vh;
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+  }
+
+  .mat-form-container {
+    width: 33rem !important;
+    min-width: 33rem !important;
+    max-width: 33rem !important;
+  }

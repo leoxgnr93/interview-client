@@ -1,0 +1,42 @@
+<div class="container-responsive-form">
+    <div id="form-container">
+        <div class="row" class="mat-form-container">
+            <div class="col-md-12">
+                <form [formGroup]="loginForm">
+                    <label for="username" class="">USERNAME</label>
+                    <mat-form-field appearance="outline">
+                        <input id="username" matInput autocomplete="off" name="username" formControlName="username"
+                            type="text" placeholder="username">
+                        <mat-error *ngIf="loginForm.get('username').hasError('required')">
+                            Required field
+                        </mat-error>
+                        <mat-error *ngIf="loginForm.get('username').dirty">
+                            <span *ngIf="loginForm.get('username').hasError('pattern')">
+                                Pattern mismatch
+                            </span>
+                        </mat-error>
+                    </mat-form-field>
+                    <label for="password">PASSWORD</label>
+                    <mat-form-field appearance="outline">
+                        <div>
+                            <input id="password" matInput autocomplete="off" name="password" placeholder="password"
+                                formControlName="password" type="password" appTogglePassword>
+                        </div>
+                        <mat-error *ngIf="loginForm.get('password').hasError('required')">
+                            Required field
+                        </mat-error>
+                        <mat-error *ngIf="loginForm.get('password').dirty">
+                            <span *ngIf="loginForm.get('password').hasError('minlength')">
+                                Min length
+                            </span>
+                        </mat-error>
+                    </mat-form-field>
+                    <div>
+                        <button [disabled]="loginForm.invalid" mat-raised-button color="primary"
+                            (click)="login()">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
