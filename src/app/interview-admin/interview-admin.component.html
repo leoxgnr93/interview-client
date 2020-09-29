@@ -1,0 +1,15 @@
+<p>User's list</p>
+
+<table id="user-list-id" aria-hidden="true" class="table table-hover">
+    <tr>
+        <th id="id-column">id</th>
+        <th id="name-column">name</th>
+        <th id="action-column">action</th>
+
+    </tr>
+    <tr *ngFor="let user of userList" id="user-id-{{user.id}}">
+        <td class="text-center middle mat-body">{{ user.id }}</td>
+        <td class="text-center middle mat-body">{{ user.name }}</td>
+        <td class="text-center middle mat-body"></td>
+    </tr>
+</table>
