@@ -1,0 +1,9 @@
+<header class="row-flex">
+    <div class="col-md-12  col-lg-12 col-xl-12">
+        <nav class="normal-menu text-center">
+            <div *ngIf="isLoggedIn" class="menu-item">
+                <button mat-raised-button color="primary" (click)="logout()"><strong>CERRAR SESIÓN</strong></button>
+            </div>
+        </nav>
+    </div>
+</header>

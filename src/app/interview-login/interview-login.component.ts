@@ -31,6 +31,9 @@ export class InterviewLoginComponent implements OnInit {
     });
   }
 
+  /**
+   * @description - Calls login and redirects to shared component
+   */
   public login() {
     const username = this.loginForm.controls.username.value;
     const password = this.loginForm.controls.password.value;
@@ -42,10 +45,14 @@ export class InterviewLoginComponent implements OnInit {
     });
   }
 
+  /**
+   * @description - Checks wether user is logged
+   */
   public validateLoggedIn() {
     const userInfo = this.userService.getLocalUserInfo();
     if (userInfo != null && userInfo !== undefined) {
       if (userInfo !== null) {
+        this.userService.setLoggedInStatus(true);
         this.router.navigate(['shared']);
       }
     }

@@ -1,3 +1,4 @@
+import { AccountService } from './account/account.service';
 import { UserService } from './user/user.service';
 import { MaterialModule } from './shared/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -11,13 +12,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InterviewLoginComponent } from './interview-login/interview-login.component';
 import { InterviewAdminComponent } from './interview-admin/interview-admin.component';
 import { InterviewSharedComponent } from './interview-shared/interview-shared.component';
+import { InterviewHeaderComponent } from './interview-header/interview-header.component';
+import { InterviewAssignAccountComponent } from './interview-assign-account/interview-assign-account.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InterviewLoginComponent,
     InterviewAdminComponent,
-    InterviewSharedComponent
+    InterviewSharedComponent,
+    InterviewHeaderComponent,
+    InterviewAssignAccountComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +32,7 @@ import { InterviewSharedComponent } from './interview-shared/interview-shared.co
     MaterialModule,
     InterviewLoginModule
   ],
-  providers: [UserService],
+  providers: [UserService, AccountService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
